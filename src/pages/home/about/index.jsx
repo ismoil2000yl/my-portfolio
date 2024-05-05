@@ -14,6 +14,16 @@ const index = () => {
 
   const { currentLangCode } = useSelector(state => state.system)
 
+  const onButtonClick = () => {
+    const pdfUrl = "assets/images/Ismoil-Jalolov.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Ismoil-Jalolov.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className='w-[95%] lg:w-full mx-auto'>
       <div className="container py-[65px]">
@@ -21,7 +31,7 @@ const index = () => {
           <button className='w-[40px] p-1 h-[40px] rounded-2xl text-white border border-spacing-1 border-solid border-white'>
             <img src={IconHome} className="w-full h-full object-contain rounded-[50%]" alt="" />
           </button>
-          <Link target="_blank" to='assets/images/Ismoil-Jalolov.pdf' download className='px-4 py-2 cursor-pointer rounded-2xl text-white bg-[#5BD2A7] hover:text-[#5BD2A7] hover:bg-white flex items-center gap-2 resume-download transition-3s'>
+          <button onClick={() => onButtonClick()} className='px-4 py-2 cursor-pointer rounded-2xl text-white bg-[#5BD2A7] hover:text-[#5BD2A7] hover:bg-white flex items-center gap-2 resume-download transition-3s'>
             <span>
               CV
             </span>
@@ -41,7 +51,7 @@ const index = () => {
                 className='transition-3s'
               />
             </svg>
-          </Link>
+          </button>
         </div>
         <div className='flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-4'>
           <div className='w-[300px] h-full flex flex-col items-center justify-center gap-2'>
