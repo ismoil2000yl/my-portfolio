@@ -8,6 +8,7 @@ import IconInstagram from 'assets/images/png/instagram.png'
 import IconFacebook from 'assets/images/png/facebook.png'
 import IconHome from 'assets/images/png/home.png'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const index = () => {
 
@@ -20,7 +21,7 @@ const index = () => {
           <button className='w-[40px] p-1 h-[40px] rounded-2xl text-white border border-spacing-1 border-solid border-white'>
             <img src={IconHome} className="w-full h-full object-contain rounded-[50%]" alt="" />
           </button>
-          <a href='assets/images/Ismoil-Jalolov.pdf' download className='px-4 py-2 cursor-pointer rounded-2xl text-white bg-[#5BD2A7] hover:text-[#5BD2A7] hover:bg-white flex items-center gap-2 resume-download transition-3s'>
+          <Link target="_blank" to='assets/images/Ismoil-Jalolov.pdf' download className='px-4 py-2 cursor-pointer rounded-2xl text-white bg-[#5BD2A7] hover:text-[#5BD2A7] hover:bg-white flex items-center gap-2 resume-download transition-3s'>
             <span>
               CV
             </span>
@@ -40,7 +41,7 @@ const index = () => {
                 className='transition-3s'
               />
             </svg>
-          </a>
+          </Link>
         </div>
         <div className='flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-4'>
           <div className='w-[300px] h-full flex flex-col items-center justify-center gap-2'>
