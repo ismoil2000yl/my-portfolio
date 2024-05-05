@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import config from "config";
 
 const initialState = {
-	currentLangCode: "EN",
+	currentLangCode: "UZ",
 	changeFilmType: 1
 };
 
