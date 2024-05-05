@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* background-color: #334155; */
+    background-color: #6E7F80;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+@font-face {
+    font-family: gfsn;
+    src: url("../fonts/GFSNeohellenic-Regular.ttf");
+}
+
+.font-gfsn {
+    font-family: gfsn;
+}
+
+.menu-item {
+    border-bottom: 1px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.menu-item:hover {
+    border-bottom: 1px solid white;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropbtn__icon {
+    width: 35px;
+    height: 35px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #091730; */
+    background-color: #475569;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding: 7px 0px;
+    border-radius: 8px;
+    left: -4rem;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    gap: 10px;
+}
+
+.dropdown-content a img {
+    width: 35px;
+    height: 35px;
+}
+
+.dropdown-content a span {
+    font-weight: bold;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.react-icon {
+    transition: all .1s ease-in-out;
+    animation: 5s react infinite linear;
+}
+
+@keyframes react {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.resume-download:hover>svg path {
+    stroke: #5BD2A7
+}
+
+.transition-3s{
+    transition: all .3s ease-in-out;
+}
